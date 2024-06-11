@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        table, th, td {
+            border: 1px solid #e1e1e1;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        td {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Data</h1>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Employee rows will go here -->
+        </tbody>
+    </table>
+    <script>
+        async function fetchEmployeeData() {
+            try {
+                const response = await fetch('https://localhost:7081/api/Employee');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log(data);
+                const tableBody = document.getElementById('employeeTable').querySelector('tbody');
+                data.forEach(employee => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${employee.id}</td>
+                        <td>${employee.name}</td>
+                        <td>${employee.email}</td>
+                        <td>${employee.department}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        }
+
+        window.onload = fetchEmployeeData;
+    </script>
+</body>
+</html>
