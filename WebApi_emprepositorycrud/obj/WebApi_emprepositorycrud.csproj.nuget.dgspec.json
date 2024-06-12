@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Workspaces\\WPT Workspace\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj": {}
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\CRUD REST CORS\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj": {}
   },
   "projects": {
-    "E:\\Workspaces\\WPT Workspace\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\CRUD REST CORS\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Workspaces\\WPT Workspace\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\CRUD REST CORS\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj",
         "projectName": "WebApi_emprepositorycrud",
-        "projectPath": "E:\\Workspaces\\WPT Workspace\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\CRUD REST CORS\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\Workspaces\\WPT Workspace\\WebApi_emprepositorycrud\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\CRUD REST CORS\\WebApi_emprepositorycrud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

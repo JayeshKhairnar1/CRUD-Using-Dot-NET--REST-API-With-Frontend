@@ -1,0 +1,23 @@
+<script>
+    deletedata= async function(){
+    let  response  =  await  fetch("https://localhost:7081/api/Employee/3",
+       {method:"delete"} 
+    );
+    if  (response.ok)  {  
+    let  x =  await  response.json();
+    
+  
+    console.log(response.headers);
+    
+        }  
+        
+        
+        else  {
+            alert("HTTP-Error:  "  +  response.status);
+            
+            }
+            }
+    
+    </script>
+    <p id="a"></p>
+    <input id="btn" type="button" style="color: brown;" name="get object" onclick="deletedata();"/>

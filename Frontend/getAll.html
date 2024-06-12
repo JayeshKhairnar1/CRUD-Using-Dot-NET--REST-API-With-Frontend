@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD_JAYESH </title>
+	<script>
+
+		function getdata()
+		{
+		fetch('https://localhost:7081/api/Employee')
+		.then(response=>response.json())
+		.then(data=> {
+			let fd="";
+		 alert(data)
+			 console.log(data)
+			  for(let x of data)
+			  {console.log(x)
+				  for(let b in x)
+				  {console.log(x[b])
+				fd+=x[b]+"<br/>"
+			  }
+			  fd+="<hr/>";
+			  }
+		document.getElementById('p').innerHTML=fd;
+		});
+		}
+		getdata();
+		
+		
+		
+		
+		
+		
+		
+		
+		function fetchData() {
+			 return new Promise(function(resolve,reject){
+			reject();
+			 });
+		}
+		let promise=fetchData();
+		promise.catch(function(){
+			   console.log("Fetch Error");
+		}).then(function(){
+				console.log("data");
+		});
+	
+		
+		</script>
+		
+		 
+</head>
+<body>
+	<p id="p"></p>
+</body>
+</html>
+
+
+
+
+

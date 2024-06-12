@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fWxlLRvOu6Q=",
+  "dgSpecHash": "EwtTvUzBtoY=",
   "success": true,
-  "projectFilePath": "E:\\Workspaces\\WPT Workspace\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\CRUD REST CORS\\WebApi_emprepositorycrud\\WebApi_emprepositorycrud.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

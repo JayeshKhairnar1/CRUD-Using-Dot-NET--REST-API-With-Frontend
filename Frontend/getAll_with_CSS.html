@@ -64,24 +64,13 @@
     </table>
     <script>
         async function fetchEmployeeData() {
-            
-                /*
-                try {
+            try {
                 const response = await fetch('https://localhost:7081/api/Employee');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
-                }*/
-                const response = await fetch('https://localhost:7081/api/Employee');
+                }
                 const data = await response.json();
                 console.log(data);
-                window.onload = fetchEmployeeData;
-              for( k of data){
-                for(i in k){
-                    comsole.log(k[i]);
-                }
-              }
-              
-              /*
                 const tableBody = document.getElementById('employeeTable').querySelector('tbody');
                 data.forEach(employee => {
                     const row = document.createElement('tr');
@@ -99,8 +88,6 @@
         }
 
         window.onload = fetchEmployeeData;
-        */
-        }
     </script>
 </body>
 </html>

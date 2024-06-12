@@ -18,7 +18,7 @@ namespace WebApi_emprepositorycrud
             builder.Services.AddTransient<IEmployeeservice, SqlEmployeeservice>();
             builder.Services.AddDbContext<Appdbcontext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeDBConnection")), ServiceLifetime.Transient);
 
-            // Add CORS services
+          /*  // Add CORS services
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowLocalhost",
@@ -29,11 +29,16 @@ namespace WebApi_emprepositorycrud
                                .AllowAnyMethod();
                     });
             });
-
+          */
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddCors(
+                (p) => p.AddDefaultPolicy(policy => policy.WithOrigins("*")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
 
+                         ));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -43,12 +48,15 @@ namespace WebApi_emprepositorycrud
                 app.UseSwaggerUI();
             }
 
+            /*
+            // Enable CORS
+            app.UseCors("AllowLocalhost");
+            */
+            app.UseCors();  
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
-            // Enable CORS
-            app.UseCors("AllowLocalhost");
 
             app.MapControllers();
 
